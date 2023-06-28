@@ -86,17 +86,17 @@ fun Tarea(text: String, text2: String) {
         Row {
             Text(text="App de Android")
             Text(text = " Jajaja")
-            myImage()
+            MyImage()
         }
     }
 
 }
 @Composable
-fun myImage()  {
+fun MyImage()  {
     Image(painter = painterResource(id = R.drawable.ic_launcher_foreground),
         contentDescription = "",
         modifier = Modifier
-            .size(200.dp)
+            .size(100.dp)
             .clip(CircleShape)
             .background(Color.Green)
     )
@@ -109,14 +109,8 @@ fun MyComponents(message: MyMessage) {
         mutableStateOf(false)
     }
 
-    Row() {
-        Image(painter = painterResource(id = R.drawable.ic_launcher_foreground),
-            contentDescription = "",
-            modifier = Modifier
-                .clip(CircleShape)
-                .background(Color.Blue)
-                .size(100.dp)
-        )
+    Row {
+        MyImage()
         Column() {
             Text(message.title)
             Spacer(modifier = Modifier
