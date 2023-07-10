@@ -92,14 +92,6 @@ fun vista(datos: Misdatos) {
 }
 data class Misdatos(val titulo: String,val fecha: String,val texto: String)
 
-@Preview(showSystemUi = true)
-@Composable
-fun GreetingPreview() {
-    PrimerAppTheme {
-        Misdatos(datos)
-
-    }
-}
 
 @Composable
 fun Misdatos(datos: List<Misdatos>){
